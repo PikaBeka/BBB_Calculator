@@ -40,4 +40,8 @@ bool TicTac::compareGrid(int mask, int idx)
 void TicTac::ResetCounter()
 {
     this->counter = 0;
+    for (int i = 0; i < 9; i++)
+    {
+        this->grid[i] = -1;
+    }
 }
