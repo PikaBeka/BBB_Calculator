@@ -38,8 +38,7 @@ private:
     };
 
 private slots:
-    void
-    Start();
+    void Start();
     void Reset();
     void Press(); // counter increment -> counter %2 == 0 -> Change text to X/O (PutItem())
 };
