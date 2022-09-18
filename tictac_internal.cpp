@@ -1,10 +1,12 @@
 #include "tictac.h"
 
+constexpr int TicTac::winGrids[][9];
+
 int TicTac::PutItem(int n)
 {
-    this.counter++;
-    this->grid[n] = this.counter % 2;
-    return this->IsWin(this.counter % 2);
+    this->counter++;
+    this->grid[n] = this->counter % 2;
+    return this->IsWin(this->counter % 2);
 }
 
 int TicTac::IsWin(int mask)
@@ -16,8 +18,8 @@ int TicTac::IsWin(int mask)
             mask % 2 == 1 ? this->firstCounter++ : this->secondCounter++;
             return 1;
         }
-        return 0;
     }
+    return 0;
 }
 
 bool TicTac::compareGrid(int mask, int idx)
@@ -30,7 +32,7 @@ bool TicTac::compareGrid(int mask, int idx)
 
     for (int i = 0; i < 9; i++)
     {
-        if (compare[i] != this->winGrids[idx][i])
+        if (compare[i] != TicTac::winGrids[idx][i] && TicTac::winGrids[idx][i] != 0)
             return false;
     }
 

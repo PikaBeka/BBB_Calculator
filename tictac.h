@@ -26,7 +26,8 @@ private:
     int PutItem(int);           // done
     void ResetCounter();        // done
     bool compareGrid(int, int); // done
-    static int const winGrids[8][9] = {
+    int started = 0;
+    static constexpr int winGrids[][9] = {
         {1, 0, 0, 0, 1, 0, 0, 0, 1},
         {0, 0, 1, 0, 1, 0, 1, 0, 0},
         {1, 0, 0, 1, 0, 0, 1, 0, 0},
